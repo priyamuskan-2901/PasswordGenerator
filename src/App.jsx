@@ -34,10 +34,11 @@ function App() {
   useEffect(() => {
     passwordGenerator()
   }, [length, numberAllowed, charAllowed, passwordGenerator])
+  const backgroundImageUrl = 'url("https://mlzblexzewmc.i.optimole.com/VaiLqr8-5EClLDSp/w:auto/h:auto/q:mauto/f:avif/https://magedata.ai/wp-content/uploads/2022/06/Data-Masking.png")';
   return (
-    
-    <div className="w-full max-w-md mx-auto shadow-md rounded-lg px-4 py-3 my-8 bg-gray-800 text-orange-500">
-      <h1 className='text-white text-center my-3'>Password generator</h1>
+    <div className="flex items-center justify-center h-screen" style={{ backgroundImage: backgroundImageUrl, backgroundSize: 'cover', backgroundPosition: 'center' }}>  
+     <div className="w-full max-w-md mx-auto border border-gray-90 rounded-lg p-5 backdrop-blur-sm bg-white/30">
+      <h1 className='text-gray-900 text-xl text-center font-bold py-3'>Password generator</h1>
     <div className="flex shadow rounded-lg overflow-hidden mb-4">
         <input
             type="text"
@@ -49,11 +50,11 @@ function App() {
         />
         <button
         onClick={copyPasswordToClipboard}
-        className='outline-none bg-blue-700 text-white px-3 py-0.5 shrink-0'
+        className='outline-none bg-gray-900 text-white px-3 py-0.5 shrink-0'
         >copy</button>
         
     </div>
-    <div className='flex text-sm gap-x-2'>
+    <div className='flex text-gray-900 font-bold text-sm gap-x-2'>
       <div className='flex items-center gap-x-1'>
         <input 
         type="range"
@@ -89,7 +90,7 @@ function App() {
       </div>
     </div>
 </div>
-    
+</div>  
   )
 }
 
